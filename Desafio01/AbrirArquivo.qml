@@ -21,7 +21,7 @@ Rectangle{
         }
 
         FileDialog {
-            id: filedialog
+            id: fileDialog
             title: "Selecione um arquivo"
             folder: shortcuts.home
             onAccepted: {
@@ -31,6 +31,7 @@ Rectangle{
             }
         }
 
+        // TextArea com ajuste ao texto
         Flickable {
             id: flickable
             width: parent.width
@@ -46,17 +47,13 @@ Rectangle{
 
                 background: Rectangle {
                     border.color: "white"
-                    width: 1000
-                    height: 500
-                    anchors.centerIn: parent
                 }
             }
             ScrollBar.vertical: ScrollBar {}
             ScrollBar.horizontal: ScrollBar {}
         }
 
-        Button {
-            id:babrirarquivo
+        Button { //Botão Abrir FileDialog
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.bottom: parents.bottom
             text: "Abrir"
