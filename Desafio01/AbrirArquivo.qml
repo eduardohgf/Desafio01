@@ -54,6 +54,7 @@ Rectangle{
         }
 
         Button { //Botão Abrir FileDialog
+            id:abrir
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.bottom: parents.bottom
             text: "Abrir"
