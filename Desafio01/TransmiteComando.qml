@@ -41,6 +41,7 @@ Rectangle {
                     TextInput{
                         id:topico
                         anchors.fill: parent
+                        text:'/'
                     }
                 }
                 Text{
