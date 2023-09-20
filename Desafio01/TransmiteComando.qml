@@ -24,32 +24,35 @@ Rectangle {
             width: 250
             height: 150
             color:"darkgray"
+            radius: 4
             anchors.centerIn: parent
 
             ColumnLayout{
                 id:boxtext
                 anchors.fill: parent
                 Text{
-                    id:topico
-                    text:"Tópico:"
+                    id:topic
+                    text:" Tópico:"
                 }
                 Rectangle {
                     id:areati
                     width: boxtext.width
-                    height: topico.height +3
+                    height: topic.height +3
                     TextInput{
+                        id:topico
                         anchors.fill: parent
                     }
                 }
                 Text{
                     id:conteudo
-                    text:"Conteúdo:"
+                    text:" Conteúdo:"
                 }
                 Rectangle {
                     id:areacont
                     width: boxtext.width
                     height: conteudo.height +3
                     TextInput{
+                        id:textcontent
                         anchors.fill: parent
                     }
                 }
@@ -59,7 +62,7 @@ Rectangle {
                     anchors.bottom: parent.bottom
                     text: "Enviar"
                     onClicked: {
-                        text:'teste'
+                        comando.enviaMensagem(topico.text, textcontent.text);
                     }
                 }
             }
